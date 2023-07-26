@@ -29,7 +29,7 @@
     </script>
 
     <style>
-        .font-lato{
+        .font-lato {
             font-family: 'Lato', sans-serif;
         }
     </style>
@@ -37,8 +37,52 @@
 </head>
 
 <body>
-    <header>
+    <header class="container mx-auto">
+        <div class="navbar bg-[#F85559] my-6 p-7 rounded-full">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Item 1</a></li>
+                        <li><a>Item 2</a></li>
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-white">
+                        <li><a>Item 1</a></li>
+                        <li><a>Item 2</a></li>
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <img src="images/logo-full.png" alt="logo">
+            </div>
+            <div class="navbar-end hidden lg:flex">
+                <div class="flex items-center justify-center">
+                    <!-- Search Input -->
+                    <div class="relative">
+                        <input type="text" class="py-2 pr-10 pl-4  rounded-full focus:outline-none focus:border-blue-500 placeholder-gray-500" placeholder="Search" />
+                        <!-- Search Icon -->
+                        <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                              </svg>
+                              
+                        </span>
+                    </div>
+                </div>
 
+            </div>
+        </div>
     </header>
 
     <main>
@@ -46,7 +90,7 @@
     </main>
 
     <footer>
-        
+
     </footer>
 </body>
 
