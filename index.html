@@ -52,7 +52,7 @@
 <body class="font-lato">
     <header class="lg:max-w-screen-xl lg:mx-auto p-4">
         <!-- navbar start -->
-        <nav class="bg-[#F85559] my-6 py-4 px-4 lg:px-6 rounded-full flex justify-between items-center">
+        <nav class="lg:bg-[#F85559] my-6 py-4 px-4 lg:px-6 rounded-full flex justify-between items-center">
             <div class="hidden lg:flex">
                 <ul class="menu menu-horizontal px-1 text-white">
                     <li><a class="hover:text-white">Home</a></li>
@@ -63,7 +63,10 @@
             </div>
 
             <div>
-                <img src="images/logo-full.png" class="w-28 lg:w-2/3 cursor-pointer" alt="logo">
+                <img class="hidden lg:inline-block" src="images/logo-full.png" class="w-28 lg:w-2/3 cursor-pointer"
+                    alt="logo">
+                <img class="lg:hidden" src="images/logo-dark.png" class="w-32 lg:w-2/3 cursor-pointer" alt="logo">
+
             </div>
 
             <div>
@@ -84,6 +87,33 @@
                         </span>
                     </div>
                 </div>
+
+                <div>
+                    <div class="dropdown relative lg:hidden">
+                        <label tabindex="0" class="btn btn-ghost">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-20 p-2 shadow bg-white text-black rounded-box w-40 z absolute right-1 ">
+                            <li><a>Home</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>All Fruits</a></li>
+                            <li>
+                                <div class="relative rounded-full  lg:hidden block">
+                                    <input type="search" placeholder="Search"
+                                        class="input input-bordered w-32 h-8 text-black rounded-full pr-0 mr-1" />
+                                    <i
+                                        class="fas fa-search absolute top-1/2 right-7 transform -translate-y-1/2 text-gray-500"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
 
@@ -93,9 +123,9 @@
                 <div class="carousel w-full">
                     <div id="slide1"
                         class="carousel-item relative h-48 md:h-full w-full bg-slider-bg1 bg-center bg-cover rounded-lg">
-    
+
                         <div class="absolute top-0 left-0 w-full h-full bg-opacity-60 bg-gray-950 rounded-lg"></div>
-    
+
                         <div
                             class="flex flex-col justify-center items-center text-center mx-auto py-9 md:pb-36 md:pt-12 space-y-5 relative z-20">
                             <h1 class=" text-2xl md:text-7xl font-bold text-white">Exotic tastes at your <br>
@@ -106,7 +136,7 @@
                                 class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-button-bgcolor text-white">Shop
                                 Now</button>
                         </div>
-    
+
                         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide4" class="btn btn-circle">❮</a>
                             <a href="#slide2" class="btn btn-circle">❯</a>
@@ -115,7 +145,7 @@
                     <div id="slide2"
                         class="carousel-item relative h-48 md:h-full w-full bg-slider-bg2 bg-center bg-cover rounded-lg">
                         <div class="absolute top-0 left-0 w-full h-full bg-opacity-60 bg-gray-950 rounded-lg"></div>
-    
+
                         <div
                             class="flex flex-col justify-center items-center text-center mx-auto py-9 md:pb-36 md:pt-12 space-y-5 relative z-20">
                             <h1 class=" text-2xl md:text-7xl font-bold text-white">Exotic tastes at your <br>
@@ -134,7 +164,7 @@
                     <div id="slide3"
                         class="carousel-item relative h-48 md:h-full w-full bg-slider-bg3 bg-center bg-cover rounded-lg">
                         <div class="absolute top-0 left-0 w-full h-full bg-opacity-60 bg-gray-950 rounded-lg"></div>
-    
+
                         <div
                             class="flex flex-col justify-center items-center text-center mx-auto py-9 md:pb-36 md:pt-12 space-y-5 relative z-20">
                             <h1 class=" text-2xl md:text-7xl font-bold text-white">Exotic tastes at your <br>
@@ -153,7 +183,7 @@
                     <div id="slide4"
                         class="carousel-item relative h-48 md:h-full w-full bg-slider-bg4 bg-center bg-cover rounded-lg">
                         <div class="absolute top-0 left-0 w-full h-full bg-opacity-60 bg-gray-950 rounded-lg"></div>
-    
+
                         <div
                             class="flex flex-col justify-center items-center text-center mx-auto py-9 md:pb-36 md:pt-12 space-y-5 relative z-20">
                             <h1 class=" text-2xl md:text-7xl font-bold text-white">Exotic tastes at your <br>
@@ -171,35 +201,35 @@
                     </div>
                 </div>
 
-        <!-- Hero Bottom Box -->
-        <div class="absolute inset-x-40 top-[80%] hidden lg:block">
-            <div class="grid grid-cols-5 gap-5 p-6 bg-white rounded-md shadow-md">
-                <div class="flex flex-col items-center cursor-pointer">
-                    <img src="images/fruit1.png" alt="fruit1">
-                    <p class="mt-4">Grape</p>
+                <!-- Hero Bottom Box -->
+                <div class="absolute inset-x-40 top-[80%] hidden lg:block">
+                    <div class="grid grid-cols-5 gap-5 p-6 bg-white rounded-md shadow-md">
+                        <div class="flex flex-col items-center cursor-pointer">
+                            <img src="images/fruit1.png" alt="fruit1">
+                            <p class="mt-4">Grape</p>
+                        </div>
+                        <div class="flex flex-col items-center cursor-pointer">
+                            <img src="images/fruit2.png" alt="fruit2">
+                            <p class="mt-4">Orange</p>
+                        </div>
+                        <div class="flex flex-col items-center cursor-pointer">
+                            <img src="images/fruit3.png" alt="fruit3">
+                            <p class="mt-4">Mango</p>
+                        </div>
+                        <div class="flex flex-col items-center cursor-pointer">
+                            <img src="images/fruit4.png" alt="fruit3">
+                            <p class="mt-4">Strawberry</p>
+                        </div>
+                        <div class="flex flex-col items-center cursor-pointer">
+                            <img src="images/fruit5.png" alt="fruit3">
+                            <p class="mt-4">Pomegranate</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex flex-col items-center cursor-pointer">
-                    <img src="images/fruit2.png" alt="fruit2">
-                    <p class="mt-4">Orange</p>
-                </div>
-                <div class="flex flex-col items-center cursor-pointer">
-                    <img src="images/fruit3.png" alt="fruit3">
-                    <p class="mt-4">Mango</p>
-                </div>
-                <div class="flex flex-col items-center cursor-pointer">
-                    <img src="images/fruit4.png" alt="fruit3">
-                    <p class="mt-4">Strawberry</p>
-                </div>
-                <div class="flex flex-col items-center cursor-pointer">
-                    <img src="images/fruit5.png" alt="fruit3">
-                    <p class="mt-4">Pomegranate</p>
-                </div>
-            </div>
-        </div>
             </div>
         </section>
 
-        
+
     </header>
 
     <main class="lg:max-w-screen-xl lg:mx-auto p-4">
@@ -296,7 +326,7 @@
                             </svg>
                         </div>
                         <div class="card-actions mt-7">
-                            <button class="text-[#F85559] font-bold"  onclick="deal_modal_1.showModal()">Buy Now</button>
+                            <button class="text-[#F85559] font-bold" onclick="deal_modal_1.showModal()">Details</button>
                         </div>
                     </div>
                 </div>
@@ -331,7 +361,7 @@
                             </svg>
                         </div>
                         <div class="card-actions mt-7">
-                            <button class="text-[#F85559] font-bold" onclick="deal_modal_2.showModal()">Buy Now</button>
+                            <button class="text-[#F85559] font-bold" onclick="deal_modal_2.showModal()">Details</button>
                         </div>
                     </div>
                 </div>
@@ -366,7 +396,7 @@
                             </svg>
                         </div>
                         <div class="card-actions mt-7">
-                            <button class="text-[#F85559] font-bold" onclick="deal_modal_3.showModal()">Buy Now</button>
+                            <button class="text-[#F85559] font-bold" onclick="deal_modal_3.showModal()">Details</button>
                         </div>
                     </div>
                 </div>
@@ -401,7 +431,7 @@
                             </svg>
                         </div>
                         <div class="card-actions mt-7">
-                            <button class="text-[#F85559] font-bold" onclick="deal_modal_4.showModal()">Buy Now</button>
+                            <button class="text-[#F85559] font-bold" onclick="deal_modal_4.showModal()">Details</button>
                         </div>
                     </div>
                 </div>
@@ -495,11 +525,12 @@
         <section class="my-16">
             <div class="max-w-xl mx-auto my-10 text-center">
                 <h1 class="text-5xl font-bold mb-6">Why Choose Us</h1>
-                <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin
+                    literature from 45 BC, making it over 2000 years old.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 items-center my-20">
- 
+
                 <!-- Left column -->
                 <div class="order-1 lg:order-none pt-12 lg:pt-0">
                     <div class="flex flex-col lg:flex-row items-center lg:items-start gap-4 mb-16 lg:mb-4">
@@ -509,7 +540,8 @@
                         <div class="text-center lg:text-left">
                             <h2 class="text-2xl font-bold">Dedicated Team</h2>
                             <div class="w-24 border-b-2 border-gray-400 my-4 mx-auto lg:mx-0"></div>
-                            <p class="md:max-w-sm lg:max-w-none">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                            <p class="md:max-w-sm lg:max-w-none">Professional employees are there for you to pick the
+                                most amazing and fresh fruits.</p>
                         </div>
                     </div>
 
@@ -520,7 +552,8 @@
                         <div class="text-center lg:text-left">
                             <h2 class="text-2xl font-bold">Fresh is Best</h2>
                             <div class="w-24 border-b-2 border-gray-400 my-4 mx-auto lg:mx-0"></div>
-                            <p class="md:max-w-sm lg:max-w-none">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                            <p class="md:max-w-sm lg:max-w-none">Professional employees are there for you to pick the
+                                most amazing and fresh fruits.</p>
                         </div>
                     </div>
 
@@ -531,7 +564,8 @@
                         <div class="text-center lg:text-left">
                             <h2 class="text-2xl font-bold">Gift Certificates</h2>
                             <div class="w-24 border-b-2 border-gray-400 my-4 mx-auto lg:mx-0"></div>
-                            <p class="md:max-w-sm lg:max-w-none">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                            <p class="md:max-w-sm lg:max-w-none">Professional employees are there for you to pick the
+                                most amazing and fresh fruits.</p>
                         </div>
                     </div>
 
@@ -544,36 +578,42 @@
 
                 <!-- Right column -->
                 <div class="order-2 lg:order-none">
-                    <div class="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-4 text-center lg:text-right mb-16 lg:mb-4">
-                        
+                    <div
+                        class="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-4 text-center lg:text-right mb-16 lg:mb-4">
+
                         <div>
                             <h2 class="text-2xl font-bold mb-2">Integrated Supplier</h2>
                             <div class="w-24 border-b-2 mx-auto lg:ml-[70%] border-gray-400 my-4"></div>
-                            <p class="md:max-w-sm lg:max-w-none">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                            <p class="md:max-w-sm lg:max-w-none">Professional employees are there for you to pick the
+                                most amazing and fresh fruits.</p>
                         </div>
 
                         <div>
                             <img class="w-24" src="images/wcu-icon4.png" alt="wcu-icon1">
                         </div>
                     </div>
-                    <div class="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-4 text-center lg:text-right mb-16 lg:mb-4">
-                        
+                    <div
+                        class="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-4 text-center lg:text-right mb-16 lg:mb-4">
+
                         <div>
                             <h2 class="text-2xl font-bold mb-2">Sustainable Practice</h2>
                             <div class="w-24 border-b-2 mx-auto lg:ml-[70%] border-gray-400 my-4"></div>
-                            <p class="md:max-w-sm lg:max-w-none">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                            <p class="md:max-w-sm lg:max-w-none">Professional employees are there for you to pick the
+                                most amazing and fresh fruits.</p>
                         </div>
 
                         <div>
                             <img class="w-24" src="images/wcu-icon5.png" alt="wcu-icon1">
                         </div>
                     </div>
-                    <div class="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-4 text-center lg:text-right mb-16 lg:mb-0">
-                        
+                    <div
+                        class="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-4 text-center lg:text-right mb-16 lg:mb-0">
+
                         <div>
                             <h2 class="text-2xl font-bold mb-2">The Benefits Only</h2>
                             <div class="w-24 border-b-2 mx-auto lg:ml-[70%] border-gray-400 my-4"></div>
-                            <p class="md:max-w-sm lg:max-w-none">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                            <p class="md:max-w-sm lg:max-w-none">Professional employees are there for you to pick the
+                                most amazing and fresh fruits.</p>
                         </div>
 
                         <div>
@@ -621,16 +661,19 @@
                                     fill="#FBC0A8" />
                             </svg>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="modal-action flex gap-6 justify-center">
-                        <div>
-                            <button class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-white border-[2px] border-orange-500">Close</button>
-                        </div>
-                        <div>
-                            <button class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-button-bgcolor text-white">Buy Now</button>
-                        </div>
+                    <div>
+                        <button
+                            class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-white border-[2px] border-orange-500">Close</button>
+                    </div>
+                    <div>
+                        <button
+                            class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-button-bgcolor text-white">Buy
+                            Now</button>
+                    </div>
                 </div>
             </form>
         </dialog>
@@ -670,16 +713,19 @@
                                     fill="#FBC0A8" />
                             </svg>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="modal-action flex gap-6 justify-center">
-                        <div>
-                            <button class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-white border-[2px] border-orange-500">Close</button>
-                        </div>
-                        <div>
-                            <button class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-button-bgcolor text-white">Buy Now</button>
-                        </div>
+                    <div>
+                        <button
+                            class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-white border-[2px] border-orange-500">Close</button>
+                    </div>
+                    <div>
+                        <button
+                            class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-button-bgcolor text-white">Buy
+                            Now</button>
+                    </div>
                 </div>
             </form>
         </dialog>
@@ -719,16 +765,19 @@
                                     fill="#FBC0A8" />
                             </svg>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="modal-action flex gap-6 justify-center">
-                        <div>
-                            <button class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-white border-[2px] border-orange-500">Close</button>
-                        </div>
-                        <div>
-                            <button class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-button-bgcolor text-white">Buy Now</button>
-                        </div>
+                    <div>
+                        <button
+                            class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-white border-[2px] border-orange-500">Close</button>
+                    </div>
+                    <div>
+                        <button
+                            class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-button-bgcolor text-white">Buy
+                            Now</button>
+                    </div>
                 </div>
             </form>
         </dialog>
@@ -768,16 +817,19 @@
                                     fill="#FBC0A8" />
                             </svg>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="modal-action flex gap-6 justify-center">
-                        <div>
-                            <button class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-white border-[2px] border-orange-500">Close</button>
-                        </div>
-                        <div>
-                            <button class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-button-bgcolor text-white">Buy Now</button>
-                        </div>
+                    <div>
+                        <button
+                            class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-white border-[2px] border-orange-500">Close</button>
+                    </div>
+                    <div>
+                        <button
+                            class="lg:btn py-2 px-5 text-lg font-semibold rounded-lg bg-button-bgcolor text-white">Buy
+                            Now</button>
+                    </div>
                 </div>
             </form>
         </dialog>
